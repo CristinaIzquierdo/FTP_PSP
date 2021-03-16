@@ -17,12 +17,14 @@ public class AppFTP {
 
 		try {
 			clienteFTP.connect("localhost");
-			System.out.println("Introduce nombre de usuario: ");
-			String nombreUser = Leer.pedirCadena();
-			System.out.println("Introduce tu contraseña: ");
-			String passUser = Leer.pedirCadena();
 			
-			if(clienteFTP.login(nombreUser, passUser) == true) {
+			System.out.println("Introduce nombre de usuario: ");
+			String nombreUsuario = Leer.pedirCadena();
+			
+			System.out.println("Introduce tu contraseña: ");
+			String contraUsuario = Leer.pedirCadena();
+			
+			if(clienteFTP.login(nombreUsuario, contraUsuario) == true) {
 				System.out.println("********** LOGIN CORRECTO **********");
 			}else {
 				System.out.println("********** LOGIN INCORRECTO **********");
