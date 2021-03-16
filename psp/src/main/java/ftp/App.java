@@ -2,17 +2,15 @@ package ftp;
 
 import org.apache.commons.net.ftp.FTPClient;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args ){
-    FTPClient clienteFTP = new FTPClient();		
+	    
+    FTPClient clienteFTP = new FTPClient();	
+	    
 		int opcion;
 		do {
-			opcion = menu();	
+			opcion = imprimirMenu();	
 			switch (opcion) {
 			case 1: AppFTP.conectar(clienteFTP);
 				break;
@@ -33,12 +31,10 @@ public class App
 			case 9: AppFTP.desconectar(clienteFTP);
 			
 			} 
-		}while(opcion != 0);
-		
-					
-	}//FIN main
+		}while(opcion != 0);					
+	}
 	
-	public static int menu() {
+	public static int imprimirMenu() {
 		System.out.println(" *******************************");
 		System.out.println("***************** MENÚ ******************");
 		System.out.println(" *******************************");
